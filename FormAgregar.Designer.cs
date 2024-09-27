@@ -41,6 +41,7 @@
             txtStock = new TextBox();
             txtCategoria = new TextBox();
             btnAdd = new Button();
+            groupBox1 = new GroupBox();
             SuspendLayout();
             // 
             // label1
@@ -149,11 +150,20 @@
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += btnAdd_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Location = new Point(12, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(666, 135);
+            groupBox1.TabIndex = 13;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Agregar items";
+            // 
             // FormAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(682, 147);
+            ClientSize = new Size(686, 159);
             Controls.Add(btnAdd);
             Controls.Add(txtCategoria);
             Controls.Add(txtStock);
@@ -167,6 +177,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(groupBox1);
             Name = "FormAgregar";
             Text = "FormAgregar";
             ResumeLayout(false);
@@ -188,5 +199,6 @@
         private TextBox txtStock;
         private TextBox txtCategoria;
         private Button btnAdd;
+        private GroupBox groupBox1;
     }
 }

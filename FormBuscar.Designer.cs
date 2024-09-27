@@ -48,7 +48,7 @@
             dg2.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nombre, Descripcion, Stock, Precio, Categoria });
             dg2.Location = new Point(39, 139);
             dg2.Name = "dg2";
-            dg2.Size = new Size(675, 269);
+            dg2.Size = new Size(638, 269);
             dg2.TabIndex = 8;
             // 
             // Codigo
@@ -92,7 +92,7 @@
             // 
             // btnBuscarItem
             // 
-            btnBuscarItem.Location = new Point(296, 71);
+            btnBuscarItem.Location = new Point(216, 56);
             btnBuscarItem.Name = "btnBuscarItem";
             btnBuscarItem.Size = new Size(75, 23);
             btnBuscarItem.TabIndex = 10;
@@ -102,7 +102,7 @@
             // 
             // txtCodigoBuscador
             // 
-            txtCodigoBuscador.Location = new Point(155, 72);
+            txtCodigoBuscador.Location = new Point(91, 53);
             txtCodigoBuscador.Name = "txtCodigoBuscador";
             txtCodigoBuscador.Size = new Size(100, 23);
             txtCodigoBuscador.TabIndex = 11;
@@ -110,7 +110,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(79, 79);
+            label2.Location = new Point(39, 56);
             label2.Name = "label2";
             label2.Size = new Size(46, 15);
             label2.TabIndex = 12;
@@ -120,7 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(776, 439);
+            ClientSize = new Size(690, 421);
             Controls.Add(label2);
             Controls.Add(txtCodigoBuscador);
             Controls.Add(btnBuscarItem);

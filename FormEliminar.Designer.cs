@@ -44,14 +44,14 @@
             // 
             // txtEliminado
             // 
-            txtEliminado.Location = new Point(92, 58);
+            txtEliminado.Location = new Point(92, 65);
             txtEliminado.Name = "txtEliminado";
             txtEliminado.Size = new Size(100, 23);
             txtEliminado.TabIndex = 1;
             // 
             // btnEliminado
             // 
-            btnEliminado.Location = new Point(108, 126);
+            btnEliminado.Location = new Point(104, 130);
             btnEliminado.Name = "btnEliminado";
             btnEliminado.Size = new Size(75, 23);
             btnEliminado.TabIndex = 2;
