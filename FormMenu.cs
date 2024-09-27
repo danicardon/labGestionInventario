@@ -7,7 +7,7 @@ namespace labInventario
 {
     public partial class FormMenu : Form
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\dcardon\source\repos\labInventario\database\labInventarioDB.accdb;Persist Security Info=False;";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\dcardon\source\repos\labInventario\database\labInventarioDB.accdb;Persist Security Info=False;";
 
         public FormMenu()
         {
@@ -25,17 +25,19 @@ namespace labInventario
                                      FROM Productos p
                                      LEFT JOIN Categorias c ON p.CategoriaID = c.CategoriaID";
 
-                    using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                    using (OleDbCommand comando = new OleDbCommand(query, connection))
                     {
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-                        dg1.DataSource = dataTable;
+                        using (OleDbDataAdapter adaptador = new OleDbDataAdapter(comando))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adaptador.Fill(dataTable);
+                            dg1.DataSource = dataTable;
+                        }
                     }
 
                     // Ajustar los nombres de las columnas si es necesario
                     dg1.Columns["Codigo"].HeaderText = "Código";
                     dg1.Columns["Descripcion"].HeaderText = "Descripción";
-
                     // Opcional: Formatear la columna de Precio si es necesario
                     dg1.Columns["Precio"].DefaultCellStyle.Format = "C2";
                 }
@@ -44,6 +46,11 @@ namespace labInventario
             {
                 MessageBox.Show("Error al cargar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

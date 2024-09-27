@@ -81,6 +81,7 @@
             btnVer.TabIndex = 3;
             btnVer.Text = "Ver productos en stock";
             btnVer.UseVisualStyleBackColor = true;
+            btnVer.Click += btnVer_Click;
             // 
             // label1
             // 

@@ -28,12 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormEliminar";
+            label1 = new Label();
+            txtEliminado = new TextBox();
+            btnEliminado = new Button();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(36, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(200, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Escriba el codigo del item a eliminar.";
+            // 
+            // txtEliminado
+            // 
+            txtEliminado.Location = new Point(92, 58);
+            txtEliminado.Name = "txtEliminado";
+            txtEliminado.Size = new Size(100, 23);
+            txtEliminado.TabIndex = 1;
+            // 
+            // btnEliminado
+            // 
+            btnEliminado.Location = new Point(108, 126);
+            btnEliminado.Name = "btnEliminado";
+            btnEliminado.Size = new Size(75, 23);
+            btnEliminado.TabIndex = 2;
+            btnEliminado.Text = "Eliminar";
+            btnEliminado.UseVisualStyleBackColor = true;
+            btnEliminado.Click += btnEliminado_Click;
+            // 
+            // FormEliminar
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(273, 188);
+            Controls.Add(btnEliminado);
+            Controls.Add(txtEliminado);
+            Controls.Add(label1);
+            Name = "FormEliminar";
+            Text = "FormEliminar";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private TextBox txtEliminado;
+        private Button btnEliminado;
     }
 }
